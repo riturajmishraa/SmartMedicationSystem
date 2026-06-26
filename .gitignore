@@ -1,0 +1,25 @@
+# Java
+*.class
+*.jar
+*.war
+
+# Build folders
+out/
+build/
+dist/
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+
+# macOS
+.DS_Store
