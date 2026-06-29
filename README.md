@@ -124,7 +124,8 @@ java -cp out app.Main
 
 ### Dashboard
 
-<img width="1976" height="1390" alt="image" src="https://github.com/user-attachments/assets/cdceff15-55c0-4d19-8ce3-747532cb991e" />
+<img width="1976" height="1390" alt="Screenshot 2026-06-29 090401" src="https://github.com/user-attachments/assets/4a186f12-b96b-4c41-8312-8e0e1e648093" />
+
 
 
 ---
