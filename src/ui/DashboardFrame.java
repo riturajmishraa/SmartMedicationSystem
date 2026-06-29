@@ -24,126 +24,181 @@ public class DashboardFrame extends JFrame {
     }
 
     private void initializeUI() {
+    setTitle("Smart Medication System");
 
-        setTitle("Smart Medication System");
+    setSize(1000, 700);
 
-        setSize(700, 500);
+    setLocationRelativeTo(null);
 
-        setLocationRelativeTo(null);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setResizable(false);
 
-       
+    ImageIcon appIcon =
+            new ImageIcon("assets/logo.jpg");
 
-        JPanel mainPanel = new JPanel();
+    setIconImage(appIcon.getImage());
 
-        mainPanel.setLayout(new BorderLayout());
 
-        JLabel titleLabel =
-                new JLabel(
-                        "SMART MEDICATION SYSTEM",
-                        SwingConstants.CENTER
-                );
 
-        titleLabel.setFont(
-                new Font(
-                        "Arial",
-                        Font.BOLD,
-                        24
-                )
-        );
+    BackgroundPanel background =
+            new BackgroundPanel(
+                    "assets/background.jpg"
+            );
 
-        mainPanel.add(
-                titleLabel,
-                BorderLayout.NORTH
-        );
+    background.setLayout(null);
 
-        JPanel buttonPanel =
-                new JPanel();
+    setContentPane(background);
 
-        buttonPanel.setLayout(
-                new GridLayout(
-                        7,
-                        1,
-                        15,
-                        15
-                )
-        );
 
-        addMedicineButton =
-                new JButton(
-                        "Add Medicine"
-                );
 
-        nextMedicineButton =
-                new JButton(
-                        "Next Medicine"
-                );
+    Font buttonFont =
+            new Font(
+                    "Segoe UI",
+                    Font.BOLD,
+                    18
+            );
 
-        inventoryButton =
-                new JButton(
-                        "Inventory"
-                );
 
-        lowStockButton =
-                new JButton(
-                        "Low Stock Alert"
-                );
 
-        expiryAlertButton =
-                new JButton(
-                        "Expiry Alert"
-                );
+    addMedicineButton =
+            new RoundedButton(
+                    "Add Medicine"
+            );
 
-        historyButton =
-                new JButton(
-                        "History"
-                );
+    nextMedicineButton =
+            new RoundedButton(
+                    "Next Medicine"
+            );
 
-        exitButton =
-                new JButton(
-                        "Exit"
-                );
+    inventoryButton =
+            new RoundedButton(
+                    "Inventory"
+            );
 
-        buttonPanel.add(
-                addMedicineButton
-        );
+    lowStockButton =
+            new RoundedButton(
+                    "Low Stock Alert"
+            );
 
-        buttonPanel.add(
-                nextMedicineButton
-        );
+    expiryAlertButton =
+            new RoundedButton(
+                    "Expiry Alert"
+            );
 
-        buttonPanel.add(
-                inventoryButton
-        );
+    historyButton =
+            new RoundedButton(
+                    "History"
+            );
 
-        buttonPanel.add(
-                lowStockButton
-        );
+    exitButton =
+            new RoundedButton(
+                    "Exit"
+            );
 
-        buttonPanel.add(
-                expiryAlertButton
-        );
 
-        buttonPanel.add(
-                historyButton
-        );
 
-        buttonPanel.add(
-                exitButton
-        );
+    JButton[] buttons = {
 
-        mainPanel.add(
-                buttonPanel,
-                BorderLayout.CENTER
-        );
+            addMedicineButton,
+            nextMedicineButton,
+            inventoryButton,
+            lowStockButton,
+            expiryAlertButton,
+            historyButton,
+            exitButton
 
-        add(mainPanel);
+    };
 
-        registerEvents();
 
-        setVisible(true);
+
+    for (JButton button : buttons) {
+
+        button.setFont(buttonFont);
+
+        background.add(button);
     }
+
+
+
+    addMedicineButton.setBounds(
+            120,
+            120,
+            180,
+            70
+    );
+
+
+
+    nextMedicineButton.setBounds(
+            650,
+            120,
+            180,
+            70
+    );
+
+
+
+    inventoryButton.setBounds(
+            120,
+            250,
+            180,
+            70
+    );
+
+
+
+    lowStockButton.setBounds(
+            650,
+            250,
+            180,
+            70
+    );
+
+
+
+    expiryAlertButton.setBounds(
+            120,
+            380,
+            180,
+            70
+    );
+
+
+
+    historyButton.setBounds(
+            650,
+            380,
+            180,
+            70
+    );
+    exitButton.setBounds(430, 490, 140, 50);
+
+    // 2. Set colors
+    exitButton.setBackground(new Color(220, 38, 38)); // Slightly brighter red
+    exitButton.setForeground(Color.WHITE); 
+    try {
+        ImageIcon originalIcon = new ImageIcon("assets/exit.png");
+        // Scale the icon down to 20x20 pixels so it fits nicely
+        Image scaledImage = originalIcon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+        
+        exitButton.setIcon(new ImageIcon(scaledImage));
+        
+        // Position the text on the left, and the icon on the right
+        exitButton.setHorizontalTextPosition(SwingConstants.LEFT);
+        exitButton.setIconTextGap(10); // Adds a nice gap between the word "Exit" and the icon
+        
+    } catch (Exception e) {
+        System.out.println("Could not load exit icon.");
+    }
+
+
+
+    registerEvents();
+
+    setVisible(true);
+}
+
 
     private void registerEvents() {
 

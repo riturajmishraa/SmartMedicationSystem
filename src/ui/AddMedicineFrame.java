@@ -20,42 +20,49 @@ public class AddMedicineFrame extends JFrame {
     }
 
     private void initializeUI() {
-
         setTitle("Add Medicine");
-
         setSize(500, 400);
-
         setLocationRelativeTo(null);
 
-        setLayout(new GridLayout(6, 2, 10, 10));
+        // 1. Create a main panel
+        JPanel mainPanel = new JPanel();
+        
+        // 2. Set your GridLayout on this panel instead of the frame
+        mainPanel.setLayout(new GridLayout(6, 2, 10, 10));
+        
+        // 3. Add padding (Top, Left, Bottom, Right) - 30 pixels on the left/right
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 30));
 
-        add(new JLabel("Medicine Name"));
+        // 4. Add your components to the mainPanel
+        mainPanel.add(new JLabel("Medicine Name"));
         nameField = new JTextField();
-        add(nameField);
+        mainPanel.add(nameField);
 
-        add(new JLabel("Dosage"));
+        mainPanel.add(new JLabel("Dosage"));
         dosageField = new JTextField();
-        add(dosageField);
+        mainPanel.add(dosageField);
 
-        add(new JLabel("Time"));
+        mainPanel.add(new JLabel("Time"));
         timeField = new JTextField();
-        add(timeField);
+        mainPanel.add(timeField);
 
-        add(new JLabel("Quantity"));
+        mainPanel.add(new JLabel("Quantity"));
         quantityField = new JTextField();
-        add(quantityField);
+        mainPanel.add(quantityField);
 
-        add(new JLabel("Expiry Date"));
+        mainPanel.add(new JLabel("Expiry Date"));
         expiryField = new JTextField();
-        add(expiryField);
+        mainPanel.add(expiryField);
 
         saveButton = new JButton("Save Medicine");
 
-        add(new JLabel());
-        add(saveButton);
+        mainPanel.add(new JLabel()); // Empty placeholder
+        mainPanel.add(saveButton);
+
+        // 5. Add the padded panel to the JFrame
+        add(mainPanel);
 
         registerEvents();
-
         setVisible(true);
     }
 
