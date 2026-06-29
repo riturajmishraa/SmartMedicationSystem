@@ -175,7 +175,7 @@ public class DashboardFrame extends JFrame {
     exitButton.setBounds(430, 490, 140, 50);
 
     // 2. Set colors
-    exitButton.setBackground(new Color(220, 38, 38)); // Slightly brighter red
+    exitButton.setBackground(new Color(220, 38, 38));
     exitButton.setForeground(Color.WHITE); 
     try {
         ImageIcon originalIcon = new ImageIcon("assets/exit.png");
