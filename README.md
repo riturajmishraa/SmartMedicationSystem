@@ -72,6 +72,8 @@ No database required.
 - Priority Queue
 - Stack
 - File Handling
+- Git
+- Github
 - VS Code
 
 ---
@@ -144,6 +146,36 @@ java -cp out app.Main
 
 ---
 
+### Low Stock Alert
+
+<img width="1978" height="1390" alt="image" src="https://github.com/user-attachments/assets/83607a40-24c7-4b1e-bdb5-6b49b7b8087f" />
+
+
+---
+
+### Next Medicine
+
+<img width="1970" height="1384" alt="image" src="https://github.com/user-attachments/assets/4b005b63-738d-4ac2-9c64-df9c8d74daa2" />
+
+
+---
+
+
+### Expiry Alert
+
+<img width="1974" height="1388" alt="image" src="https://github.com/user-attachments/assets/3f9b7369-e3a1-479a-8037-439a21da0b30" />
+
+
+---
+
+### History
+
+<img width="1974" height="1388" alt="image" src="https://github.com/user-attachments/assets/b0f565dc-767c-4440-aabe-cec3c4a24ebf" />
+
+
+---
+
+
 ## 🧠 Data Structures Used
 
 | Data Structure | Purpose |
@@ -157,17 +189,40 @@ java -cp out app.Main
 
 ## 🎯 Future Improvements
 
-- Login System
-- User Authentication
-- SQLite/MySQL Database
-- Notifications
-- Email Reminder
+- User Login & Authentication
+- SQLite / MySQL Database Integration
+- Desktop Notifications
+- Email & SMS Medicine Reminders
 - Dark Mode
 - Medicine Images
-- Export Reports
+- Export Reports (PDF/Excel)
 - Calendar Integration
+- Multi-user Support
+- Cloud Data Backup
 
 ---
+
+## ⭐ Version
+
+Current Release: **v1.0**
+
+This version includes:
+
+- Modern Dashboard UI
+- Add Medicine
+- Inventory Management
+- Search Medicine
+- Delete Medicine
+- Undo Delete
+- Next Medicine Reminder
+- Low Stock Alert
+- Expiry Alert
+- History Tracking
+- Local File Storage
+
+
+---
+
 
 ## 👨‍💻 Author
 
